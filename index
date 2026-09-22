@@ -1,0 +1,4893 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#0f0f0f">
+
+    <title>Cross Promotion Entry</title>
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+
+            --gold: #c9a227;
+            --gold-light: #e6c765;
+            --gold-dark: #8a6d1f;
+            --gold-deep: #6e5716;
+
+            --bg: #faf7ef;
+            --panel: #ffffff;
+            --panel-soft: #fdfaf2;
+            --input: #fffdf7;
+            --border: #e3d6b3;
+
+            --text: #3d3421;
+            --muted: #8d8368;
+
+            --green: #1e8e4f;
+            --red: #d4382c;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        html {
+
+            width: 100%;
+
+            -webkit-text-size-adjust: 100%;
+
+            text-size-adjust: 100%;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding:
+                clamp(10px, 2vw, 22px)
+                max(clamp(10px, 2vw, 22px), env(safe-area-inset-right))
+                clamp(10px, 2vw, 22px)
+                max(clamp(10px, 2vw, 22px), env(safe-area-inset-left));
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            min-height: 100dvh;
+
+            overflow-x: hidden;
+
+            font-family:
+                'Segoe UI',
+                Tahoma,
+                Geneva,
+                Verdana,
+                sans-serif;
+
+            background:
+
+                radial-gradient(
+                    circle at top center,
+                    rgba(201,162,39,0.16),
+                    transparent 42%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(201,162,39,0.10),
+                    transparent 48%
+                ),
+
+                linear-gradient(
+                    180deg,
+                    #fdfbf4,
+                    #f5efdd
+                );
+
+            color: var(--text);
+
+            -webkit-font-smoothing: antialiased;
+
+        }
+
+
+        img,
+        video {
+
+            max-width: 100%;
+
+        }
+
+
+        /* =====================================================
+           MAIN LAYOUT — fluid
+        ===================================================== */
+
+        .page-wrapper {
+
+            width: 100%;
+
+            max-width: 1500px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: minmax(300px, 430px) minmax(0, 1fr);
+
+            gap: clamp(14px, 2.5vw, 35px);
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .container {
+
+            width: 100%;
+
+            min-width: 0;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fbf5e7
+                );
+
+            padding: 22px 16px 16px;
+
+            border-radius: 12px;
+
+            border: 1px solid #d9c37a;
+
+            box-shadow:
+
+                0 10px 30px rgba(160,130,40,0.16),
+
+                inset 0 1px 0 rgba(255,255,255,0.9);
+
+        }
+
+
+        h2 {
+
+            text-align: center;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-size: clamp(13px, 1.4vw, 15px);
+
+            font-weight: 800;
+
+            margin: 0 0 17px;
+
+            padding-bottom: 7px;
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    var(--gold-deep),
+                    var(--gold),
+                    var(--gold-deep)
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            color: transparent;
+
+            border-bottom: 2px solid var(--gold);
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 11px;
+
+        }
+
+
+        /* =====================================================
+           LABELS — INCREASED SIZE
+        ===================================================== */
+
+        label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--gold-dark);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+
+        }
+
+
+        input,
+        textarea,
+        select {
+
+            width: 100%;
+
+            padding: 7px 9px;
+
+            background: var(--input);
+
+            border: 1px solid #d8caa0;
+
+            border-radius: 5px;
+
+            color: var(--text);
+
+            outline: none;
+
+            font-family: inherit;
+
+            font-size: 10px;
+
+            transition: 0.2s;
+
+        }
+
+
+        input {
+
+            height: 30px;
+
+        }
+
+
+        select {
+
+            height: 30px;
+
+        }
+
+
+        textarea {
+
+            min-height: 55px;
+
+            resize: vertical;
+
+        }
+
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(201,162,39,0.16);
+
+        }
+
+
+        input::placeholder,
+        textarea::placeholder {
+
+            color: #b3a67e;
+
+        }
+
+
+        input[readonly] {
+
+            background: #f5efdd;
+
+            color: #8d7a4a;
+
+            border-style: dashed;
+
+        }
+
+
+        hr {
+
+            border: 0;
+
+            border-top: 1px solid #e8dcc0;
+
+            margin: 13px 0;
+
+        }
+
+
+        /* =====================================================
+           PHOTO
+        ===================================================== */
+
+        .file-input {
+
+            width: 100%;
+
+            height: 30px;
+
+            padding: 4px;
+
+            cursor: pointer;
+
+            font-size: 9px;
+
+        }
+
+
+        .photo-preview {
+
+            width: 100%;
+
+            height: 100px;
+
+            border: 1px dashed var(--gold);
+
+            margin-top: 6px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 5px;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    #fffdf5,
+                    #f7f0dc
+                );
+
+        }
+
+
+        .photo-preview i {
+
+            font-size: 20px;
+
+            color: #cbb26a;
+
+        }
+
+
+        #previewImg {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            display: none;
+
+        }
+
+
+        /* =====================================================
+           ADD / UPDATE RECORD BUTTON
+        ===================================================== */
+
+        .btn-submit {
+
+            width: 100%;
+
+            height: 34px;
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    var(--gold-dark),
+                    var(--gold),
+                    var(--gold-light)
+                );
+
+            border: 1px solid #b8941f;
+
+            border-radius: 5px;
+
+            color: #3d2f07;
+
+            font-weight: 800;
+
+            font-size: 10px;
+
+            letter-spacing: 0.5px;
+
+            cursor: pointer;
+
+            margin-top: 7px;
+
+            transition: 0.2s;
+
+            text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+
+        }
+
+
+        .btn-submit:hover {
+
+            box-shadow:
+                0 4px 16px
+                rgba(201,162,39,0.40);
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .btn-submit:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+
+        }
+
+
+        /* =====================================================
+           CANCEL EDIT BUTTON
+        ===================================================== */
+
+        .cancel-edit-btn {
+
+            width: 100%;
+
+            height: 30px;
+
+            margin-top: 6px;
+
+            border-radius: 5px;
+
+            border: 1px solid #d8caa0;
+
+            background: #f7f1df;
+
+            color: #8d7a4a;
+
+            cursor: pointer;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            display: none;
+
+        }
+
+
+        .cancel-edit-btn:hover {
+
+            background: #efe5c8;
+
+            color: #5d4c26;
+
+        }
+
+
+        /* =====================================================
+           RIGHT PREVIEW
+        ===================================================== */
+
+        .preview-container {
+
+            width: 100%;
+
+            min-width: 0;
+
+            min-height: 555px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fbf5e8
+                );
+
+            border: 1px solid #d9c37a;
+
+            border-radius: 12px;
+
+            padding: clamp(12px, 1.8vw, 20px);
+
+            box-shadow:
+                0 10px 35px
+                rgba(160,130,40,0.14);
+
+        }
+
+
+        .preview-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            border-bottom: 1px solid #e8dcc0;
+
+            padding-bottom: 10px;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .preview-title {
+
+            color: var(--gold-dark);
+
+            font-size: clamp(11px, 1.3vw, 13px);
+
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .live-badge {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            color: var(--green);
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+        }
+
+
+        .live-dot {
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            box-shadow:
+                0 0 8px
+                rgba(30,142,79,0.6);
+
+        }
+
+
+        /* =====================================================
+           PREVIEW PHOTO
+        ===================================================== */
+
+        .preview-photo-box {
+
+            width: 100%;
+
+            height: clamp(170px, 24vh, 230px);
+
+            border: 1px solid #e0d3ab;
+
+            border-radius: 7px;
+
+            background: #fdfaf0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        #sidePreviewImg {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            display: none;
+
+        }
+
+
+        .empty-photo {
+
+            text-align: center;
+
+            color: #b9a35f;
+
+            font-size: 10px;
+
+        }
+
+
+        .empty-photo i {
+
+            display: block;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        /* =====================================================
+           DETAILS
+        ===================================================== */
+
+        .preview-section-title {
+
+            color: var(--gold-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin: 12px 0 7px;
+
+            padding-bottom: 5px;
+
+            border-bottom: 1px solid #ece1c2;
+
+        }
+
+
+        .details-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            gap: 7px;
+
+        }
+
+
+        .detail-card {
+
+            background: #fdfaf1;
+
+            border: 1px solid #ece1c2;
+
+            border-radius: 5px;
+
+            padding: 7px 9px;
+
+            min-height: 40px;
+
+            min-width: 0;
+
+        }
+
+
+        .detail-label {
+
+            display: block;
+
+            color: #9a8a5a;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .detail-value {
+
+            display: block;
+
+            color: var(--text);
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            word-break: break-word;
+
+        }
+
+
+        .detail-full {
+
+            grid-column: 1 / -1;
+
+        }
+
+
+        .status-value {
+
+            color: var(--gold-dark);
+
+        }
+
+
+        /* =====================================================
+           ESTIMATION RECORDS
+           (inside the right preview panel)
+        ===================================================== */
+
+        .records-container {
+
+            width: 100%;
+
+            margin: 16px 0 0;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #fffdf7,
+                    #f9f3e3
+                );
+
+            border: 1px solid #e0d3ab;
+
+            border-radius: 8px;
+
+            padding: 12px;
+
+        }
+
+
+        .records-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .records-title {
+
+            color: var(--gold-dark);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .record-count {
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            white-space: nowrap;
+
+        }
+
+
+        .table-wrapper {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+            -webkit-overflow-scrolling: touch;
+
+            border: 1px solid #e0d3ab;
+
+            border-radius: 7px;
+
+            background: #ffffff;
+
+        }
+
+
+        .table-wrapper::-webkit-scrollbar {
+
+            height: 8px;
+
+        }
+
+
+        .table-wrapper::-webkit-scrollbar-track {
+
+            background: #f3ecd8;
+
+            border-radius: 8px;
+
+        }
+
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    var(--gold),
+                    var(--gold-light)
+                );
+
+            border-radius: 8px;
+
+        }
+
+
+        table {
+
+            width: 100%;
+
+            min-width: 1080px;
+
+            border-collapse: collapse;
+
+        }
+
+
+        th {
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    #e6c765,
+                    #d4af37
+                );
+
+            color: #3d2f07;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            padding: 10px 8px;
+
+            text-align: left;
+
+            white-space: nowrap;
+
+            border-bottom: 2px solid var(--gold-dark);
+
+        }
+
+
+        td {
+
+            color: #544a30;
+
+            font-size: 9px;
+
+            padding: 9px 8px;
+
+            border-bottom: 1px solid #f0e7cd;
+
+            vertical-align: middle;
+
+        }
+
+
+        tbody tr:nth-child(even) {
+
+            background: #fdfaf1;
+
+        }
+
+
+        tbody tr:hover {
+
+            background:
+                rgba(212,175,55,0.12);
+
+        }
+
+
+        /* =====================================================
+           EDITING ROW
+        ===================================================== */
+
+        .editing-row {
+
+            background:
+                rgba(212,175,55,0.16) !important;
+
+            box-shadow:
+                inset 3px 0 0 var(--gold);
+
+        }
+
+
+        .editing-row td {
+
+            border-bottom-color:
+                rgba(201,162,39,0.35);
+
+        }
+
+
+        /* =====================================================
+           THUMB
+        ===================================================== */
+
+        .thumb {
+
+            width: 45px;
+
+            height: 35px;
+
+            object-fit: cover;
+
+            border-radius: 4px;
+
+            border: 1px solid #c9b476;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           STATUS
+        ===================================================== */
+
+        .status-yes {
+
+            color: var(--green);
+
+            font-weight: 800;
+
+        }
+
+
+        .status-no {
+
+            color: var(--red);
+
+            font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+           ACTION BUTTONS
+        ===================================================== */
+
+        .action-buttons {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 6px;
+
+            white-space: nowrap;
+
+        }
+
+
+        .edit-btn,
+        .delete-btn {
+
+            width: 30px;
+
+            height: 28px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 12px;
+
+            transition: 0.2s;
+
+        }
+
+
+        .edit-btn {
+
+            border: 1px solid var(--gold);
+
+            background: #fbf3d9;
+
+            color: var(--gold-dark);
+
+        }
+
+
+        .edit-btn:hover {
+
+            background: #f3e3ae;
+
+            border-color: var(--gold-dark);
+
+            box-shadow:
+                0 0 8px
+                rgba(201,162,39,0.35);
+
+        }
+
+
+        .delete-btn {
+
+            border: 1px solid #e0a3a0;
+
+            background: #fdf0ef;
+
+            color: #c0392b;
+
+        }
+
+
+        .delete-btn:hover {
+
+            background: #f9dcd9;
+
+            border-color: var(--red);
+
+            box-shadow:
+                0 0 8px
+                rgba(212,56,44,0.25);
+
+        }
+
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .empty-records {
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #a99a6d;
+
+            font-size: 10px;
+
+        }
+
+
+        .empty-records i {
+
+            display: block;
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        /* =====================================================
+           SAVE AREA
+        ===================================================== */
+
+        .save-area {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 12px;
+
+        }
+
+
+        .save-message {
+
+            margin-right: auto;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+        }
+
+
+        .clear-btn,
+        .save-btn {
+
+            border: none;
+
+            border-radius: 5px;
+
+            height: 34px;
+
+            padding: 0 18px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+
+            cursor: pointer;
+
+            white-space: nowrap;
+
+        }
+
+
+        .clear-btn {
+
+            background: #ffffff;
+
+            border: 1px solid #d8caa0;
+
+            color: #8d7a4a;
+
+        }
+
+
+        .clear-btn:hover {
+
+            background: #f5efdd;
+
+            color: #5d4c26;
+
+        }
+
+
+        .save-btn {
+
+            background:
+
+                linear-gradient(
+                    to right,
+                    var(--gold-dark),
+                    var(--gold),
+                    var(--gold-light)
+                );
+
+            border: 1px solid #b8941f;
+
+            color: #3d2f07;
+
+            text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+
+        }
+
+
+        .save-btn:hover {
+
+            box-shadow:
+                0 4px 16px
+                rgba(201,162,39,0.40);
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .save-btn:disabled {
+
+            opacity: 0.5;
+
+            cursor: not-allowed;
+
+            transform: none;
+
+        }
+
+
+        .clear-btn:disabled {
+
+            opacity: 0.5;
+
+            cursor: not-allowed;
+
+        }
+
+
+        /* =====================================================
+           LOOKUP STATUS + CAMERA
+        ===================================================== */
+
+        .lookup-status {
+            min-height: 13px;
+            margin-top: 3px;
+            font-size: 9px;
+            font-weight: 700;
+            color: #8d8368;
+            word-break: break-word;
+        }
+
+        .lookup-status.found {
+            color: var(--green);
+        }
+
+        .lookup-status.error {
+            color: var(--red);
+        }
+
+        .lookup-status.loading {
+            color: #b8941f;
+        }
+
+        .camera-live-btn {
+            width: 100%;
+            height: 30px;
+            margin-top: 6px;
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            background: #fbf3d9;
+            color: var(--gold-dark);
+            font-size: 9px;
+            font-weight: 800;
+            cursor: pointer;
+            letter-spacing: 0.4px;
+        }
+
+        .camera-live-btn:hover {
+            background: #f3e3ae;
+            box-shadow: 0 0 10px rgba(201,162,39,0.35);
+        }
+
+        .camera-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(40,32,12,0.82);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: max(12px, env(safe-area-inset-top))
+                     max(12px, env(safe-area-inset-right))
+                     max(12px, env(safe-area-inset-bottom))
+                     max(12px, env(safe-area-inset-left));
+        }
+
+        .camera-overlay.active {
+            display: flex;
+        }
+
+        .camera-box {
+            width: 100%;
+            max-width: min(540px, 100%);
+            background: #ffffff;
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .camera-box video {
+            width: 100%;
+            max-height: 58vh;
+            max-height: 58dvh;
+            object-fit: cover;
+            background: #000;
+            display: block;
+        }
+
+        .camera-actions {
+            display: flex;
+            gap: 8px;
+            padding: 10px;
+            background: #f7f1df;
+        }
+
+        .camera-actions button {
+            flex: 1;
+            height: 36px;
+            border: 0;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .capture-live-btn {
+            background: linear-gradient(to right, var(--gold-dark), var(--gold));
+            color: #ffffff;
+            border: 1px solid #b8941f !important;
+        }
+
+        .close-live-btn {
+            background: #ffffff;
+            color: #8d7a4a;
+            border: 1px solid #d8caa0 !important;
+        }
+
+
+
+
+        /* =========================================================
+   DARK TEXT OVERRIDE
+   Keeps the existing design but makes all text dark
+========================================================= */
+
+body,
+.container,
+.preview-container,
+.records-container,
+.detail-card,
+table,
+input,
+textarea,
+select,
+button {
+    color: #111111;
+}
+
+label {
+    color: #111111 !important;
+}
+
+h2 {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    background: none !important;
+}
+
+.preview-title,
+.preview-section-title,
+.records-title {
+    color: #111111 !important;
+}
+
+.detail-label,
+.detail-value {
+    color: #111111 !important;
+}
+
+.record-count,
+.save-message,
+.lookup-status,
+.empty-records {
+    color: #111111 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #555555 !important;
+}
+
+input[readonly] {
+    color: #111111 !important;
+}
+
+th {
+    color: #111111 !important;
+}
+
+td {
+    color: #111111 !important;
+}
+
+.status-value {
+    color: #111111 !important;
+}
+
+.clear-btn,
+.cancel-edit-btn,
+.camera-live-btn,
+.edit-btn {
+    color: #111111 !important;
+}
+
+.btn-submit,
+.save-btn {
+    color: #111111 !important;
+}
+
+
+        /* =====================================================
+           LARGE MONITORS
+        ===================================================== */
+
+        @media (min-width: 1700px) {
+
+            .page-wrapper {
+
+                max-width: 1650px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           TABLETS / SMALL LAPTOPS — stack to one column
+        ===================================================== */
+
+        @media (max-width: 1150px) {
+
+            .page-wrapper {
+
+                grid-template-columns: 1fr;
+
+                max-width: 720px;
+
+                gap: 20px;
+
+            }
+
+
+            .container {
+
+                max-width: 720px;
+
+            }
+
+
+            .preview-container {
+
+                min-height: auto;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           TOUCH DEVICES — bigger tap targets + bigger labels
+        ===================================================== */
+
+        @media (hover: none) and (pointer: coarse) {
+
+            label {
+
+                font-size: 12px;
+
+                margin-bottom: 6px;
+
+            }
+
+
+            input,
+            select {
+
+                height: 38px;
+
+                font-size: 12px;
+
+            }
+
+
+            textarea {
+
+                font-size: 12px;
+
+            }
+
+
+            .btn-submit {
+
+                height: 40px;
+
+                font-size: 11px;
+
+            }
+
+
+            .cancel-edit-btn {
+
+                height: 36px;
+
+                font-size: 10px;
+
+            }
+
+
+            .camera-live-btn {
+
+                height: 36px;
+
+                font-size: 10px;
+
+            }
+
+
+            .file-input {
+
+                height: 36px;
+
+                font-size: 10px;
+
+            }
+
+
+            .clear-btn,
+            .save-btn {
+
+                height: 40px;
+
+                font-size: 11px;
+
+            }
+
+
+            .edit-btn,
+            .delete-btn {
+
+                width: 36px;
+
+                height: 32px;
+
+            }
+
+
+            .lookup-status {
+
+                font-size: 10px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           PHONES
+        ===================================================== */
+
+        @media (max-width: 640px) {
+
+            body {
+
+                padding: 10px;
+
+                padding-left: max(10px, env(safe-area-inset-left));
+
+                padding-right: max(10px, env(safe-area-inset-right));
+
+            }
+
+
+            .container {
+
+                padding: 16px 12px 12px;
+
+            }
+
+
+            .preview-container {
+
+                padding: 12px;
+
+            }
+
+
+            .preview-photo-box {
+
+                height: clamp(190px, 30vh, 260px);
+
+            }
+
+
+            .records-container {
+
+                padding: 10px;
+
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .details-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .detail-full {
+
+                grid-column: 1 / -1;
+
+            }
+
+
+            .save-area {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+
+            .save-message {
+
+                width: 100%;
+
+                margin-right: 0;
+
+                text-align: center;
+
+            }
+
+
+            .clear-btn,
+            .save-btn {
+
+                width: 100%;
+
+            }
+
+
+            .records-header {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 4px;
+
+            }
+
+
+            .camera-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .camera-actions button {
+
+                width: 100%;
+
+            }
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            .details-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .detail-full {
+
+                grid-column: auto;
+
+            }
+
+
+            h2 {
+
+                font-size: 12px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           LANDSCAPE PHONES
+        ===================================================== */
+
+        @media (max-height: 500px) and (orientation: landscape) {
+
+            body {
+
+                padding-top: 8px;
+
+                padding-bottom: 8px;
+
+            }
+
+
+            .preview-photo-box {
+
+                height: 160px;
+
+            }
+
+
+            .camera-box video {
+
+                max-height: 52vh;
+
+            }
+
+        }
+
+    </style>
+    
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     FORM + LIVE PREVIEW + RECORDS
+========================================================= -->
+
+<div class="page-wrapper">
+
+
+    <!-- =====================================================
+         LEFT FORM
+    ====================================================== -->
+
+    <div class="container">
+
+
+        <h2 id="formTitle">
+            Cross Promotion Entry
+        </h2>
+        
+
+        <form id="entryForm">
+
+
+        <select id="product" name="product" required>
+                    <option value="" selected disabled>Select Product</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Diamond">Diamond</option>
+        </select>
+
+            <!-- EMPLOYEE ID -->
+
+            <div class="form-group">
+
+                <label>
+                    Employee ID
+                </label>
+
+                <input
+                    type="text"
+                    id="empId"
+                    placeholder="Enter Employee ID..."
+                    autocomplete="off"
+                    required
+                >
+
+                <div class="lookup-status" id="empLookupStatus">
+                    Enter Employee ID for auto lookup.
+                </div>
+
+            </div>
+
+
+            <!-- EMPLOYEE NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Employee Name
+                </label>
+
+                <input
+                    type="text"
+                    id="empName"
+                    readonly
+                    placeholder="Auto filled"
+                >
+
+            </div>
+
+
+            <!-- DESIGNATION -->
+
+            <div class="form-group">
+
+                <label>
+                    Employee Designation
+                </label>
+
+                <input
+                    type="text"
+                    id="designation"
+                    readonly
+                    placeholder="Auto filled"
+                >
+
+            </div>
+
+
+            <!-- BRANCH -->
+
+            <div class="form-group">
+
+                <label>
+                    Branch
+                </label>
+
+                <input
+                    type="text"
+                    id="branch"
+                    readonly
+                    placeholder="Auto filled"
+                >
+
+            </div>
+
+
+            <!-- MANAGER ID -->
+
+            <div class="form-group">
+
+                <label>
+                    Manager Emp ID
+                </label>
+
+                <input
+                    type="text"
+                    id="managerId"
+                    placeholder="Enter Manager Employee ID..."
+                    autocomplete="off"
+                    required
+                >
+
+                <div class="lookup-status" id="managerLookupStatus">
+                    Enter Manager ID to confirm name, designation and branch.
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- CUSTOMER MOBILE -->
+
+            <div class="form-group">
+
+                <label>
+                    Customer Mobile / Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="custPhone"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    inputmode="numeric"
+                    placeholder="0000000000"
+                    required
+                >
+
+            </div>
+
+
+            <!-- CUSTOMER NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Customer Name
+                </label>
+
+                <input
+                    type="text"
+                    id="custName"
+                    placeholder="Enter customer name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ESTIMATION NUMBER -->
+
+            <div class="form-group">
+
+                <label>
+                    Estimation Number
+                </label>
+
+                <input
+                    type="text"
+                    id="estNumber"
+                    placeholder="Enter estimation number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="form-group">
+
+                <label>
+                    Status
+                </label>
+
+                <select
+                    id="status"
+                    required
+                >
+
+                    <option value="">
+                        Select Status
+                    </option>
+
+                    <option value="Yes">
+                        Yes
+                    </option>
+
+                    <option value="No">
+                        No
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- REMARKS -->
+
+            <div class="form-group">
+
+                <label>
+                    Remarks
+                </label>
+
+                <textarea
+                    id="remarks"
+                    placeholder="Enter remarks..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- PHOTO -->
+
+            <div class="form-group">
+
+                <label>
+                    Estimation Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    class="file-input"
+                    accept="image/*"
+                >
+
+                <button
+                    type="button"
+                    class="camera-live-btn"
+                    id="openCameraBtn"
+                >
+                    <i class="fas fa-camera"></i>
+                    OPEN LIVE CAMERA
+                </button>
+
+
+                <div class="photo-preview">
+
+                    <i
+                        class="fas fa-camera"
+                        id="cameraIcon"
+                    ></i>
+
+
+                    <img
+                        id="previewImg"
+                        src=""
+                        alt="Preview"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBMIT / UPDATE -->
+
+            <button
+                type="submit"
+                class="btn-submit"
+                id="submitBtn"
+            >
+
+                <i class="fas fa-plus"></i>
+
+                SUBMIT RECORD
+
+            </button>
+
+
+            <!-- CANCEL EDIT -->
+
+            <button
+                type="button"
+                class="cancel-edit-btn"
+                id="cancelEditBtn"
+                onclick="cancelEdit()"
+            >
+
+                <i class="fas fa-xmark"></i>
+
+                CANCEL EDIT
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         RIGHT LIVE PREVIEW + RECORDS
+    ====================================================== -->
+
+    <div class="preview-container">
+
+
+        <div class="preview-header">
+
+
+            <div class="preview-title">
+
+                <i class="fas fa-file-invoice-dollar"></i>
+
+                Estimation Details
+
+            </div>
+
+
+            <div class="live-badge">
+
+                <span class="live-dot"></span>
+
+                LIVE PREVIEW
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="preview-photo-box">
+
+
+            <div
+                class="empty-photo"
+                id="emptyPhoto"
+            >
+
+                <i class="fas fa-camera"></i>
+
+                Estimation Photo
+
+            </div>
+
+
+            <img
+                id="sidePreviewImg"
+                src=""
+                alt="Estimation Photo"
+            >
+
+        </div>
+
+
+        <!-- EMPLOYEE -->
+
+        <div class="preview-section-title">
+
+            Employee Details
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Employee ID
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewEmpId"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Employee Name
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewEmpName"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Designation
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewDesignation"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Branch
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewBranch"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Manager ID
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewManagerId"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Manager Name
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewManagerName"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CUSTOMER -->
+
+        <div class="preview-section-title">
+
+            Customer Details
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Customer Number
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewPhone"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Customer Name
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewCustName"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Estimation Number
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewEstNumber"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span class="detail-label">
+                    Status
+                </span>
+
+                <span
+                    class="detail-value status-value"
+                    id="previewStatus"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+            <div class="detail-card detail-full">
+
+                <span class="detail-label">
+                    Remarks
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="previewRemarks"
+                >
+                    —
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================================================
+             ESTIMATION RECORDS
+        ====================================================== -->
+
+        <div class="records-container">
+
+
+            <div class="records-header">
+
+
+                <div class="records-title">
+
+                    <i class="fas fa-list-check"></i>
+
+                    Estimation Records
+
+                </div>
+
+
+                <div
+                    class="record-count"
+                    id="recordCount"
+                >
+                    0 Records
+                </div>
+
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+
+                <table>
+
+
+                    <thead>
+
+
+                        <tr>
+
+                            <th>S.No</th>
+                            
+                            <th>Product</th>
+
+                            <th>Branch</th>
+
+                            <th>EMP ID</th>
+
+                            <th>Employee Name</th>
+
+                            <th>Designation</th>
+
+                            <th>Manager ID</th>
+
+                            <th>Customer Number</th>
+
+                            <th>Customer Name</th>
+
+                            <th>Estimation No</th>
+
+                            <th>Photo</th>
+
+                            <th>Status</th>
+
+                            <th>Remarks</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+
+                    </thead>
+
+
+                    <tbody id="recordsBody">
+
+
+                        <tr>
+
+                            <td
+                                colspan="13"
+                                class="empty-records"
+                            >
+
+                                <i class="fas fa-inbox"></i>
+
+                                No estimation records added yet.
+
+                                <br>
+
+                                Fill the form and press
+                                <b>SUBMIT RECORD</b>.
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+            <!-- SAVE -->
+
+            <div class="save-area">
+
+
+                <div
+                    class="save-message"
+                    id="saveMessage"
+                >
+
+                    Records are waiting to be saved.
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="clear-btn"
+                    onclick="clearAllRecords()"
+                >
+
+                    <i class="fas fa-trash"></i>
+
+                    CLEAR ALL
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="save-btn"
+                    id="saveBtn"
+                    onclick="saveAllRecords()"
+                    disabled
+                >
+
+                    <i class="fas fa-cloud-arrow-up"></i>
+
+                    SAVE ALL RECORDS
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="camera-overlay" id="cameraOverlay">
+    <div class="camera-box">
+        <video id="liveVideo" autoplay playsinline muted></video>
+        <div class="camera-actions">
+            <button type="button" class="capture-live-btn" id="captureLiveBtn">
+                <i class="fas fa-camera"></i> CAPTURE PHOTO
+            </button>
+            <button type="button" class="close-live-btn" id="closeLiveBtn">
+                CLOSE
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+    /* =========================================================
+       BACKEND URLS
+    ========================================================= */
+
+    var CONFIG = {
+        EMPLOYEE_LOOKUP_URL: "https://script.google.com/macros/s/AKfycbxDuOizvsU4vgZeBxItpXLUILPPLmKbeo_g8whK7Ng81XRCOJMSFy57HiEclT5iYdsPuQ/exec",
+        SAVE_URL: "https://script.google.com/macros/s/AKfycbzk_6H4A7LtPiPMtQmVLmfQxTlZ_cwn6lXxXLhF15lv4wxh_6K96jawtVyO5deaUxj0/exec",
+        MIN_ID_LENGTH: 3,
+        LOOKUP_DELAY: 800
+    };
+
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    let base64Photo = "";
+
+    let pendingRecords = [];
+
+    let lookupTimer = null;
+
+    let managerLookupTimer = null;
+
+    let empLookupSeq = 0;
+
+    let managerLookupSeq = 0;
+
+    let editingIndex = -1;
+
+    let managerName = "";
+
+    let managerDesignation = "";
+
+    let managerBranch = "";
+
+    let cameraStream = null;
+
+
+    /* =========================================================
+       HELPER
+    ========================================================= */
+
+    function value(id) {
+
+        const element =
+            document.getElementById(id);
+
+        if (!element) {
+
+            return "";
+
+        }
+
+        return element.value.trim();
+
+    }
+
+
+    function displayValue(value) {
+
+        if (
+            value === null ||
+            value === undefined ||
+            String(value).trim() === ""
+        ) {
+
+            return "—";
+
+        }
+
+        return value;
+
+    }
+
+
+    function setLookupStatus(id, text, type) {
+
+        var el = document.getElementById(id);
+
+        if (!el) return;
+
+        el.textContent = text || "";
+
+        el.className = "lookup-status" + (type ? " " + type : "");
+
+    }
+
+
+    function clearEmployeeFields() {
+
+        document.getElementById("empName").value = "";
+        document.getElementById("designation").value = "";
+        document.getElementById("branch").value = "";
+
+    }
+
+
+    /* =========================================================
+       LIVE PREVIEW
+    ========================================================= */
+
+    function updatePreview() {
+
+
+        document.getElementById(
+            "previewEmpId"
+        ).textContent =
+            displayValue(
+                value("empId")
+            );
+
+
+        document.getElementById(
+            "previewEmpName"
+        ).textContent =
+            displayValue(
+                value("empName")
+            );
+
+
+        document.getElementById(
+            "previewDesignation"
+        ).textContent =
+            displayValue(
+                value("designation")
+            );
+
+
+        document.getElementById(
+            "previewBranch"
+        ).textContent =
+            displayValue(
+                value("branch")
+            );
+
+
+        document.getElementById(
+            "previewManagerId"
+        ).textContent =
+            displayValue(
+                value("managerId")
+            );
+
+
+        document.getElementById(
+            "previewManagerName"
+        ).textContent =
+            displayValue(managerName);
+
+
+        document.getElementById(
+            "previewPhone"
+        ).textContent =
+            displayValue(
+                value("custPhone")
+            );
+
+
+        document.getElementById(
+            "previewCustName"
+        ).textContent =
+            displayValue(
+                value("custName")
+            );
+
+
+        document.getElementById(
+            "previewEstNumber"
+        ).textContent =
+            displayValue(
+                value("estNumber")
+            );
+
+
+        document.getElementById(
+            "previewStatus"
+        ).textContent =
+            displayValue(
+                value("status")
+            );
+
+
+        document.getElementById(
+            "previewRemarks"
+        ).textContent =
+            displayValue(
+                value("remarks")
+            );
+
+    }
+
+
+    /* =========================================================
+       BACKEND CALL
+    ========================================================= */
+
+    function jsonpRequest(url) {
+
+        return new Promise(function (resolve, reject) {
+
+            var cbName = "empLookup_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
+            var script = document.createElement("script");
+            var timer = setTimeout(function () {
+                cleanup();
+                reject(new Error("Lookup timeout"));
+            }, 12000);
+
+            function cleanup() {
+                clearTimeout(timer);
+                try { delete window[cbName]; } catch (err) { window[cbName] = undefined; }
+                if (script && script.parentNode) script.parentNode.removeChild(script);
+            }
+
+            window[cbName] = function (data) {
+                cleanup();
+                resolve(data);
+            };
+
+            script.async = true;
+            script.src = url + (url.indexOf("?") >= 0 ? "&" : "?") + "callback=" + encodeURIComponent(cbName);
+            script.onerror = function () {
+                cleanup();
+                reject(new Error("Lookup request failed"));
+            };
+
+            document.head.appendChild(script);
+
+        });
+
+    }
+
+
+    function postJson(url, payload) {
+
+        return fetch(url, {
+            method: "POST",
+            redirect: "follow",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(payload)
+        }).then(function (resp) {
+            return resp.json();
+        });
+
+    }
+
+
+    function viaGas(empId) {
+
+        return new Promise(function (resolve, reject) {
+
+            if (
+                typeof google === "undefined" ||
+                !google.script ||
+                !google.script.run
+            ) {
+                reject(new Error("GAS not available"));
+                return;
+            }
+
+            google.script.run
+                .withSuccessHandler(resolve)
+                .withFailureHandler(reject)
+                .getEmployeeDetails(empId);
+
+        });
+
+    }
+
+
+    function fetchEmployeeDetails(empId) {
+
+        empId = String(empId || "").trim();
+
+        var lookupUrl =
+            CONFIG.SAVE_URL +
+            "?action=lookup&empId=" +
+            encodeURIComponent(empId);
+
+        var employeeUrl =
+            CONFIG.EMPLOYEE_LOOKUP_URL +
+            "?empId=" +
+            encodeURIComponent(empId);
+
+        return viaGas(empId)
+            .catch(function () {
+                return jsonpRequest(lookupUrl);
+            })
+            .catch(function () {
+                return jsonpRequest(employeeUrl);
+            })
+            .catch(function () {
+                return postJson(CONFIG.SAVE_URL, {
+                    action: "lookup",
+                    empId: empId
+                });
+            })
+            .catch(function () {
+                return postJson(CONFIG.EMPLOYEE_LOOKUP_URL, {
+                    action: "lookup",
+                    empId: empId
+                });
+            });
+
+    }
+
+
+    function isFound(res) {
+
+        return !!(res && (res.found === true || res.success === true) && (res.name || res.empName));
+
+    }
+
+
+    /* =========================================================
+       EMPLOYEE LOOKUP
+    ========================================================= */
+
+    function lookupEmployee(empId, immediate) {
+
+        updatePreview();
+
+        clearTimeout(lookupTimer);
+
+        empId = String(empId || "").trim();
+
+        empLookupSeq++;
+
+        if (!empId) {
+
+            clearEmployeeFields();
+
+            setLookupStatus(
+                "empLookupStatus",
+                "Enter Employee ID for auto lookup."
+            );
+
+            updatePreview();
+
+            return;
+
+        }
+
+        if (empId.length < CONFIG.MIN_ID_LENGTH) {
+
+            clearEmployeeFields();
+
+            setLookupStatus(
+                "empLookupStatus",
+                "Keep typing Employee ID..."
+            );
+
+            updatePreview();
+
+            return;
+
+        }
+
+        setLookupStatus(
+            "empLookupStatus",
+            "Waiting to finish Employee ID " + empId + "...",
+            "loading"
+        );
+
+        var seq = empLookupSeq;
+        var delay = immediate ? 0 : CONFIG.LOOKUP_DELAY;
+
+        lookupTimer = setTimeout(function () {
+
+            if (seq !== empLookupSeq) {
+                return;
+            }
+
+            if (value("empId") !== empId) {
+                return;
+            }
+
+            setLookupStatus(
+                "empLookupStatus",
+                "Searching Employee ID " + empId + "...",
+                "loading"
+            );
+
+            fetchEmployeeDetails(empId).then(function (res) {
+
+                if (seq !== empLookupSeq) {
+                    return;
+                }
+
+                if (value("empId") !== empId) {
+                    return;
+                }
+
+                if (isFound(res)) {
+
+                    document.getElementById("empName").value = res.name || res.empName || "";
+                    document.getElementById("designation").value = res.designation || "";
+                    document.getElementById("branch").value = res.branch || "";
+
+                    setLookupStatus(
+                        "empLookupStatus",
+                        "Found: " + (res.name || "") +
+                        (res.designation ? " | " + res.designation : "") +
+                        (res.branch ? " | " + res.branch : ""),
+                        "found"
+                    );
+
+                } else {
+
+                    clearEmployeeFields();
+
+                    setLookupStatus(
+                        "empLookupStatus",
+                        (res && res.message) || "Employee ID not found.",
+                        "error"
+                    );
+
+                }
+
+                updatePreview();
+
+            }).catch(function (error) {
+
+                if (seq !== empLookupSeq) {
+                    return;
+                }
+
+                console.error("Employee lookup failed:", error);
+
+                clearEmployeeFields();
+
+                setLookupStatus(
+                    "empLookupStatus",
+                    "Lookup failed. Deploy New version with access: Anyone.",
+                    "error"
+                );
+
+                updatePreview();
+
+            });
+
+        }, delay);
+
+    }
+
+
+    /* =========================================================
+       MANAGER LOOKUP
+    ========================================================= */
+
+    function clearManagerDetails() {
+
+        managerName = "";
+        managerDesignation = "";
+        managerBranch = "";
+
+    }
+
+
+    function lookupManager(managerId, immediate) {
+
+        updatePreview();
+
+        clearTimeout(managerLookupTimer);
+
+        managerId = String(managerId || "").trim();
+
+        managerLookupSeq++;
+
+        if (!managerId) {
+
+            clearManagerDetails();
+
+            setLookupStatus(
+                "managerLookupStatus",
+                "Enter Manager ID to confirm name, designation and branch."
+            );
+
+            updatePreview();
+
+            return;
+
+        }
+
+        if (managerId.length < CONFIG.MIN_ID_LENGTH) {
+
+            clearManagerDetails();
+
+            setLookupStatus(
+                "managerLookupStatus",
+                "Keep typing Manager ID..."
+            );
+
+            updatePreview();
+
+            return;
+
+        }
+
+        setLookupStatus(
+            "managerLookupStatus",
+            "Waiting to finish Manager ID " + managerId + "...",
+            "loading"
+        );
+
+        var seq = managerLookupSeq;
+        var delay = immediate ? 0 : CONFIG.LOOKUP_DELAY;
+
+        managerLookupTimer = setTimeout(function () {
+
+            if (seq !== managerLookupSeq) {
+                return;
+            }
+
+            if (value("managerId") !== managerId) {
+                return;
+            }
+
+            setLookupStatus(
+                "managerLookupStatus",
+                "Confirming Manager ID " + managerId + "...",
+                "loading"
+            );
+
+            fetchEmployeeDetails(managerId).then(function (res) {
+
+                if (seq !== managerLookupSeq) {
+                    return;
+                }
+
+                if (value("managerId") !== managerId) {
+                    return;
+                }
+
+                if (isFound(res)) {
+
+                    managerName = res.name || res.empName || "";
+                    managerDesignation = res.designation || "";
+                    managerBranch = res.branch || "";
+
+                    setLookupStatus(
+                        "managerLookupStatus",
+                        "Confirmed: " + managerName +
+                        (managerDesignation ? " | " + managerDesignation : "") +
+                        (managerBranch ? " | " + managerBranch : ""),
+                        "found"
+                    );
+
+                } else {
+
+                    clearManagerDetails();
+
+                    setLookupStatus(
+                        "managerLookupStatus",
+                        (res && res.message) || "Manager ID not found.",
+                        "error"
+                    );
+
+                }
+
+                updatePreview();
+
+            }).catch(function (error) {
+
+                if (seq !== managerLookupSeq) {
+                    return;
+                }
+
+                console.error("Manager lookup failed:", error);
+
+                clearManagerDetails();
+
+                setLookupStatus(
+                    "managerLookupStatus",
+                    "Manager lookup failed. Deploy New version with access: Anyone.",
+                    "error"
+                );
+
+                updatePreview();
+
+            });
+
+        }, delay);
+
+    }
+
+
+    /* =========================================================
+       PHOTO PREVIEW
+    ========================================================= */
+
+    function previewFile() {
+
+
+        const file =
+            document.getElementById(
+                "photoInput"
+            ).files[0];
+
+
+        if (!file) {
+
+
+            if (
+                editingIndex >= 0 &&
+                pendingRecords[editingIndex] &&
+                pendingRecords[editingIndex].photoData
+            ) {
+
+                return;
+
+            }
+
+
+            base64Photo = "";
+
+            resetPhotoPreview();
+
+            return;
+
+        }
+
+
+        if (
+            file.size >
+            10 * 1024 * 1024
+        ) {
+
+
+            alert(
+                "Photo size should be less than 10 MB."
+            );
+
+
+            document.getElementById(
+                "photoInput"
+            ).value = "";
+
+
+            if (
+                editingIndex >= 0 &&
+                pendingRecords[editingIndex] &&
+                pendingRecords[editingIndex].photoData
+            ) {
+
+                base64Photo =
+                    pendingRecords[
+                        editingIndex
+                    ].photoData;
+
+                showPhotoPreview(
+                    base64Photo
+                );
+
+            }
+            else {
+
+                base64Photo = "";
+
+                resetPhotoPreview();
+
+            }
+
+
+            return;
+
+        }
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onloadend =
+            function() {
+
+
+                base64Photo =
+                    reader.result;
+
+
+                showPhotoPreview(
+                    reader.result
+                );
+
+
+            };
+
+
+        reader.readAsDataURL(file);
+
+    }
+
+
+    function showPhotoPreview(photoData) {
+
+
+        if (!photoData) {
+
+            resetPhotoPreview();
+
+            return;
+
+        }
+
+
+        document.getElementById(
+            "previewImg"
+        ).src =
+            photoData;
+
+
+        document.getElementById(
+            "previewImg"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "cameraIcon"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "sidePreviewImg"
+        ).src =
+            photoData;
+
+
+        document.getElementById(
+            "sidePreviewImg"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "emptyPhoto"
+        ).style.display =
+            "none";
+
+    }
+
+
+    function resetPhotoPreview() {
+
+
+        document.getElementById(
+            "previewImg"
+        ).src = "";
+
+
+        document.getElementById(
+            "previewImg"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "cameraIcon"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "sidePreviewImg"
+        ).src = "";
+
+
+        document.getElementById(
+            "sidePreviewImg"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "emptyPhoto"
+        ).style.display =
+            "block";
+
+    }
+
+
+    /* =========================================================
+       LIVE CAMERA
+    ========================================================= */
+
+    function closeLiveCamera() {
+
+        var overlay = document.getElementById("cameraOverlay");
+        var video = document.getElementById("liveVideo");
+
+        if (cameraStream) {
+            cameraStream.getTracks().forEach(function (t) {
+                t.stop();
+            });
+            cameraStream = null;
+        }
+
+        if (video) video.srcObject = null;
+        if (overlay) overlay.classList.remove("active");
+
+    }
+
+
+    async function openLiveCamera() {
+
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert("Camera is not supported in this browser.");
+            return;
+        }
+
+        try {
+
+            cameraStream = await navigator.mediaDevices.getUserMedia({
+                video: {
+                    facingMode: { ideal: "environment" },
+                    width: { ideal: 1280 },
+                    height: { ideal: 720 }
+                },
+                audio: false
+            });
+
+            var video = document.getElementById("liveVideo");
+            video.srcObject = cameraStream;
+
+            document.getElementById("cameraOverlay").classList.add("active");
+
+            await video.play();
+
+        } catch (err) {
+
+            console.error(err);
+            alert("Unable to open camera. Please allow camera permission.");
+
+        }
+
+    }
+
+
+    function captureLivePhoto() {
+
+        var video = document.getElementById("liveVideo");
+
+        if (!video || !video.videoWidth) {
+            alert("Camera is still starting. Please wait a moment.");
+            return;
+        }
+
+        var canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+
+        base64Photo = canvas.toDataURL("image/jpeg", 0.92);
+        showPhotoPreview(base64Photo);
+        closeLiveCamera();
+
+    }
+
+
+    /* =========================================================
+       SET FORM MODE
+    ========================================================= */
+
+    function setEditMode() {
+
+
+        const submitBtn =
+            document.getElementById(
+                "submitBtn"
+            );
+
+
+        const cancelBtn =
+            document.getElementById(
+                "cancelEditBtn"
+            );
+
+
+        const formTitle =
+            document.getElementById(
+                "formTitle"
+            );
+
+
+        submitBtn.innerHTML =
+            '<i class="fas fa-rotate"></i> UPDATE RECORD';
+
+
+        cancelBtn.style.display =
+            "block";
+
+
+        formTitle.textContent =
+            "Cross Promotion Entry";
+
+    }
+
+
+    function setAddMode() {
+
+
+        const submitBtn =
+            document.getElementById(
+                "submitBtn"
+            );
+
+
+        const cancelBtn =
+            document.getElementById(
+                "cancelEditBtn"
+            );
+
+
+        const formTitle =
+            document.getElementById(
+                "formTitle"
+            );
+
+
+        submitBtn.innerHTML =
+            '<i class="fas fa-plus"></i> SUBMIT RECORD';
+
+
+        cancelBtn.style.display =
+            "none";
+
+
+        formTitle.textContent =
+            "Cross Promotion Entry";
+
+    }
+
+
+    /* =========================================================
+       CREATE RECORD OBJECT
+    ========================================================= */
+
+    function getFormRecord() {
+
+
+        return {
+
+            product:
+                value("product"),
+
+            branch:
+                value("branch"),
+
+
+            empId:
+                value("empId"),
+
+
+            empName:
+                value("empName"),
+
+
+            designation:
+                value("designation"),
+
+
+            managerId:
+                value("managerId"),
+
+
+            managerName:
+                managerName,
+
+
+            managerDesignation:
+                managerDesignation,
+
+
+            managerBranch:
+                managerBranch,
+
+
+            custPhone:
+                value("custPhone"),
+
+
+            custName:
+                value("custName"),
+
+
+            estNumber:
+                value("estNumber"),
+
+
+            photoData:
+                base64Photo,
+
+
+            status:
+                value("status"),
+
+
+            remarks:
+                value("remarks")
+
+        };
+
+    }
+
+
+    /* =========================================================
+       FORM SUBMIT
+    ========================================================= */
+
+    document
+        .getElementById("entryForm")
+        .addEventListener(
+            "submit",
+            function(e) {
+
+                
+
+                e.preventDefault();
+
+                if (!value("product")) {
+
+
+                    alert(
+                        "Please select Product (Diamond / Silver)."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!base64Photo) {
+
+
+                    alert(
+                        "Please select or capture the estimation photo."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("empId")) {
+
+
+                    alert(
+                        "Please enter Employee ID."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("empName")) {
+
+
+                    alert(
+                        "Employee details were not found. Please check Employee ID."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("managerId")) {
+
+
+                    alert(
+                        "Please enter Manager Emp ID."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!managerName) {
+
+
+                    alert(
+                        "Manager ID was not confirmed. Please check Manager Emp ID."
+                    );
+
+
+                    return;
+
+                }
+
+
+                const phone =
+                    value("custPhone");
+
+
+                if (
+                    !/^[0-9]{10}$/.test(phone)
+                ) {
+
+
+                    alert(
+                        "Please enter a valid 10-digit customer number."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("custName")) {
+
+
+                    alert(
+                        "Please enter Customer Name."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("estNumber")) {
+
+
+                    alert(
+                        "Please enter Estimation Number."
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (!value("status")) {
+
+
+                    alert(
+                        "Please select Status."
+                    );
+
+
+                    return;
+
+                }
+
+
+                const record =
+                    getFormRecord();
+
+
+                if (editingIndex >= 0) {
+
+
+                    const updatedIndex =
+                        editingIndex;
+
+
+                    pendingRecords[
+                        updatedIndex
+                    ] = record;
+
+
+                    editingIndex = -1;
+
+
+                    setAddMode();
+
+
+                    renderRecords();
+
+
+                    resetFormForNextRecord();
+
+
+                    document.getElementById(
+                        "saveMessage"
+                    ).textContent =
+
+                        "Record #" +
+                        (updatedIndex + 1) +
+                        " updated successfully. " +
+                        pendingRecords.length +
+                        " record(s) waiting to be saved.";
+
+
+                    return;
+
+                }
+
+
+                pendingRecords.push(
+                    record
+                );
+
+
+                renderRecords();
+
+
+                resetFormForNextRecord();
+
+
+                document.getElementById(
+                    "saveMessage"
+                ).textContent =
+
+                    pendingRecords.length +
+                    " record(s) waiting to be saved.";
+
+            }
+        );
+
+
+    /* =========================================================
+       RENDER RECORD TABLE
+    ========================================================= */
+
+    function renderRecords() {
+
+
+        const body =
+            document.getElementById(
+                "recordsBody"
+            );
+
+
+        const recordCount =
+            document.getElementById(
+                "recordCount"
+            );
+
+
+        recordCount.textContent =
+
+            pendingRecords.length +
+
+            (
+                pendingRecords.length === 1
+                    ? " Record"
+                    : " Records"
+            );
+
+
+        if (
+            pendingRecords.length === 0
+        ) {
+
+
+            body.innerHTML = `
+
+                <tr>
+
+                    <td
+                        colspan="13"
+                        class="empty-records"
+                    >
+
+                        <i class="fas fa-inbox"></i>
+
+                        No estimation records added yet.
+
+                        <br>
+
+                        Fill the form and press
+                        <b>SUBMIT RECORD</b>.
+
+                    </td>
+
+                </tr>
+
+            `;
+
+
+            document.getElementById(
+                "saveBtn"
+            ).disabled = true;
+
+
+            return;
+
+        }
+
+
+        document.getElementById(
+            "saveBtn"
+        ).disabled = false;
+
+
+        body.innerHTML = "";
+
+
+        pendingRecords.forEach(
+            function(record, index) {
+
+
+                const tr =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                if (
+                    editingIndex === index
+                ) {
+
+                    tr.classList.add(
+                        "editing-row"
+                    );
+
+                }
+
+
+                tr.innerHTML = `
+
+                    <td>
+                        ${index + 1}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.product
+                        )}
+                    </td>
+
+                    <td>
+                        ${escapeHtml(
+                            record.branch
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.empId
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.empName
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.designation
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.managerId
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.custPhone
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.custName
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.estNumber
+                        )}
+                    </td>
+
+
+                    <td>
+
+                        ${
+                            record.photoData
+
+                            ?
+
+                            `
+                            <img
+                                class="thumb"
+                                src="${record.photoData}"
+                                alt="Photo"
+                                title="Estimation Photo"
+                            >
+                            `
+
+                            :
+
+                            "—"
+                        }
+
+                    </td>
+
+
+                    <td class="${
+                        record.status === "Yes"
+                            ? "status-yes"
+                            : "status-no"
+                    }">
+
+                        ${escapeHtml(
+                            record.status
+                        )}
+
+                    </td>
+
+
+                    <td>
+                        ${escapeHtml(
+                            record.remarks || "—"
+                        )}
+                    </td>
+
+
+                    <td>
+
+                        <div class="action-buttons">
+
+
+                            <button
+                                type="button"
+                                class="edit-btn"
+                                title="Edit Record"
+                                aria-label="Edit Record"
+                                onclick="editRecord(${index})"
+                            >
+
+                                ✏️
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="delete-btn"
+                                title="Delete Record"
+                                aria-label="Delete Record"
+                                onclick="deleteRecord(${index})"
+                            >
+
+                                🗑️
+
+                            </button>
+
+
+                        </div>
+
+                    </td>
+
+                `;
+
+
+                body.appendChild(tr);
+
+            }
+        );
+
+    }
+
+
+    function editRecord(index) {
+
+
+        if (
+            index < 0 ||
+            index >= pendingRecords.length
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            editingIndex >= 0 &&
+            editingIndex !== index
+        ) {
+
+
+            const switchEdit =
+                confirm(
+                    "You are already editing another record.\n\n" +
+                    "Discard the current unsaved form changes and edit this record?"
+                );
+
+
+            if (!switchEdit) {
+
+                return;
+
+            }
+
+        }
+
+
+        const record =
+            pendingRecords[index];
+
+
+        editingIndex =
+            index;
+
+        
+
+        document.getElementById(
+            "empId"
+        ).value =
+            record.empId || "";
+
+
+        document.getElementById(
+            "empName"
+        ).value =
+            record.empName || "";
+
+
+        document.getElementById(
+            "designation"
+        ).value =
+            record.designation || "";
+
+
+        document.getElementById(
+            "branch"
+        ).value =
+            record.branch || "";
+
+
+        document.getElementById(
+            "managerId"
+        ).value =
+            record.managerId || "";
+
+
+        managerName = record.managerName || "";
+        managerDesignation = record.managerDesignation || "";
+        managerBranch = record.managerBranch || "";
+
+
+        document.getElementById(
+            "custPhone"
+        ).value =
+            record.custPhone || "";
+
+
+        document.getElementById(
+            "custName"
+        ).value =
+            record.custName || "";
+
+
+        document.getElementById(
+            "estNumber"
+        ).value =
+            record.estNumber || "";
+
+
+        document.getElementById(
+            "status"
+        ).value =
+            record.status || "";
+
+
+        document.getElementById(
+            "remarks"
+        ).value =
+            record.remarks || "";
+
+
+        document.getElementById(
+            "product"
+        )
+        .addEventListener(
+            "change",
+            updatePreview
+        );
+
+        setLookupStatus(
+            "empLookupStatus",
+            record.empName ? ("Found: " + record.empName) : "Enter Employee ID for auto lookup.",
+            record.empName ? "found" : ""
+        );
+
+
+        setLookupStatus(
+            "managerLookupStatus",
+            managerName ? ("Confirmed: " + managerName) : "Enter Manager ID to confirm name, designation and branch.",
+            managerName ? "found" : ""
+        );
+
+
+        base64Photo =
+            record.photoData || "";
+
+
+        if (base64Photo) {
+
+            showPhotoPreview(
+                base64Photo
+            );
+
+        }
+        else {
+
+            resetPhotoPreview();
+
+        }
+
+
+        setEditMode();
+
+
+        updatePreview();
+
+
+        renderRecords();
+
+
+        document.getElementById(
+            "saveMessage"
+        ).textContent =
+
+            "Editing record #" +
+            (index + 1) +
+            ". Make your changes and press UPDATE RECORD.";
+
+
+        document
+            .querySelector(".container")
+            .scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+
+        setTimeout(
+            function() {
+
+                document
+                    .getElementById("custName")
+                    .focus();
+
+            },
+            500
+        );
+
+    }
+
+
+    function cancelEdit() {
+
+
+        if (
+            editingIndex < 0
+        ) {
+
+            return;
+
+        }
+
+
+        const confirmed =
+            confirm(
+                "Cancel editing?\n\nYour changes will not be applied."
+            );
+
+
+        if (!confirmed) {
+
+            return;
+
+        }
+
+
+        editingIndex = -1;
+
+
+        setAddMode();
+
+
+        resetFormForNextRecord();
+
+
+        renderRecords();
+
+
+        document.getElementById(
+            "saveMessage"
+        ).textContent =
+
+            pendingRecords.length +
+            " record(s) waiting to be saved.";
+
+    }
+
+
+    function deleteRecord(index) {
+
+
+        if (
+            index < 0 ||
+            index >= pendingRecords.length
+        ) {
+
+            return;
+
+        }
+
+
+        const record =
+            pendingRecords[index];
+
+
+        const customerName =
+            record.custName ||
+            "Not available";
+
+
+        const estimationNo =
+            record.estNumber ||
+            "Not available";
+
+
+        const confirmed =
+            confirm(
+
+                "DELETE ESTIMATION RECORD?\n\n" +
+
+                "Customer: " +
+                customerName +
+
+                "\n" +
+
+                "Estimation No: " +
+                estimationNo +
+
+                "\n\n" +
+
+                "This record will be removed from the pending list."
+
+            );
+
+
+        if (!confirmed) {
+
+            return;
+
+        }
+
+
+        pendingRecords.splice(
+            index,
+            1
+        );
+
+
+        if (
+            editingIndex === index
+        ) {
+
+
+            editingIndex = -1;
+
+
+            setAddMode();
+
+
+            document
+                .getElementById(
+                    "entryForm"
+                )
+                .reset();
+
+
+            base64Photo = "";
+
+            clearManagerDetails();
+
+
+            resetPhotoPreview();
+
+
+            updatePreview();
+
+        }
+
+
+        else if (
+            editingIndex > index
+        ) {
+
+            editingIndex--;
+
+        }
+
+
+        renderRecords();
+
+
+        document.getElementById(
+            "saveMessage"
+        ).textContent =
+
+            pendingRecords.length +
+
+            (
+                pendingRecords.length === 1
+                    ? " record"
+                    : " records"
+            ) +
+
+            " waiting to be saved.";
+
+    }
+
+
+    function clearAllRecords() {
+
+
+        if (
+            pendingRecords.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+        const confirmed =
+            confirm(
+
+                "Are you sure you want to clear ALL " +
+
+                pendingRecords.length +
+
+                " pending estimation record(s)?\n\n" +
+
+                "These records have not yet been saved to Google Sheet."
+
+            );
+
+
+        if (!confirmed) {
+
+            return;
+
+        }
+
+
+        pendingRecords = [];
+
+
+        editingIndex = -1;
+
+
+        setAddMode();
+
+
+        renderRecords();
+
+
+        document
+            .getElementById(
+                "entryForm"
+            )
+            .reset();
+
+
+        base64Photo = "";
+
+        clearManagerDetails();
+
+
+        resetPhotoPreview();
+
+
+        updatePreview();
+
+
+        document.getElementById(
+            "saveMessage"
+        ).textContent =
+
+            "Records are waiting to be added.";
+
+    }
+
+
+    function resetFormForNextRecord() {
+
+
+        document
+            .getElementById(
+                "entryForm"
+            )
+            .reset();
+
+
+        document.getElementById(
+            "empName"
+        ).value = "";
+
+
+        document.getElementById(
+            "designation"
+        ).value = "";
+
+
+        document.getElementById(
+            "branch"
+        ).value = "";
+
+
+        base64Photo = "";
+
+        clearManagerDetails();
+
+
+        resetPhotoPreview();
+
+
+        setLookupStatus(
+            "empLookupStatus",
+            "Enter Employee ID for auto lookup."
+        );
+
+
+        setLookupStatus(
+            "managerLookupStatus",
+            "Enter Manager ID to confirm name, designation and branch."
+        );
+
+
+        updatePreview();
+
+
+        document
+            .getElementById(
+                "empId"
+            )
+            .focus();
+
+    }
+
+
+    /* =========================================================
+       SAVE ALL RECORDS
+    ========================================================= */
+
+    function compressPhoto(dataUrl) {
+        return new Promise(function (resolve) {
+            if (!dataUrl) {
+                resolve("");
+                return;
+            }
+
+            var img = new Image();
+            img.onload = function () {
+                var maxW = 900;
+                var w = img.width;
+                var h = img.height;
+
+                if (w > maxW) {
+                    h = Math.round(h * maxW / w);
+                    w = maxW;
+                }
+
+                var canvas = document.createElement("canvas");
+                var ctx = canvas.getContext("2d");
+                var quality = 0.7;
+
+                function run() {
+                    canvas.width = w;
+                    canvas.height = h;
+                    ctx.drawImage(img, 0, 0, w, h);
+                    var out = canvas.toDataURL("image/jpeg", quality);
+
+                    if (out.length > 120000 && (quality > 0.4 || w > 640)) {
+                        if (w > 640) {
+                            w = Math.round(w * 0.85);
+                            h = Math.round(h * 0.85);
+                        }
+                        quality = Math.max(0.4, quality - 0.1);
+                        run();
+                        return;
+                    }
+
+                    resolve(out);
+                }
+
+                run();
+            };
+            img.onerror = function () {
+                resolve(dataUrl);
+            };
+            img.src = dataUrl;
+        });
+    }
+
+    function iframePost(url, payload) {
+        return new Promise(function (resolve, reject) {
+            var iframe = document.createElement("iframe");
+            var name = "gas_iframe_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
+            iframe.name = name;
+            iframe.style.display = "none";
+
+            var form = document.createElement("form");
+            form.method = "POST";
+            form.action = url;
+            form.target = name;
+            form.style.display = "none";
+
+            var input = document.createElement("textarea");
+            input.name = "payload";
+            input.value = JSON.stringify(payload);
+            form.appendChild(input);
+
+            var done = false;
+
+            function cleanup() {
+                window.removeEventListener("message", onMsg);
+                if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
+                if (form.parentNode) form.parentNode.removeChild(form);
+            }
+
+            function finish(ok, data) {
+                if (done) return;
+                done = true;
+                cleanup();
+                if (ok) resolve(data);
+                else reject(data);
+            }
+
+            function onMsg(ev) {
+                var data = ev.data;
+                if (typeof data === "string") {
+                    try { data = JSON.parse(data); } catch (err) { return; }
+                }
+                if (!data || typeof data !== "object") return;
+                if (typeof data.success === "undefined") return;
+                finish(true, data);
+            }
+
+            window.addEventListener("message", onMsg);
+            document.body.appendChild(iframe);
+            document.body.appendChild(form);
+            form.submit();
+
+            setTimeout(function () {
+                finish(false, new Error("Save timed out. Open the Apps Script web app URL, not a local HTML file."));
+            }, 60000);
+        });
+    }
+
+    function saveOneRecord(record) {
+        return new Promise(function (resolve, reject) {
+            if (typeof google !== "undefined" && google.script && google.script.run) {
+                google.script.run
+                    .withSuccessHandler(resolve)
+                    .withFailureHandler(function (err) {
+                        reject(new Error(err && err.message ? err.message : err));
+                    })
+                    .saveRecord(record);
+                return;
+            }
+
+            iframePost(CONFIG.SAVE_URL, {
+                action: "saveRecord",
+                record: record
+            }).then(resolve).catch(reject);
+        });
+    }
+
+    async function saveAllRecords() {
+
+        if (pendingRecords.length === 0) {
+            alert("There are no records to save.");
+            return;
+        }
+
+        if (editingIndex >= 0) {
+            alert(
+                "You are currently editing record #" +
+                (editingIndex + 1) +
+                ".\n\nPlease press UPDATE RECORD first."
+            );
+            return;
+        }
+
+        if (!confirm("Save all " + pendingRecords.length + " record(s) to Google Sheet?")) {
+            return;
+        }
+
+        const saveBtn = document.getElementById("saveBtn");
+        const clearBtn = document.querySelector(".clear-btn");
+
+        saveBtn.disabled = true;
+        clearBtn.disabled = true;
+        saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SAVING...';
+
+        var ok = 0;
+        var fail = 0;
+        var errs = [];
+        var total = pendingRecords.length;
+
+        for (var i = 0; i < total; i++) {
+            document.getElementById("saveMessage").textContent =
+                "Uploading record " + (i + 1) + " of " + total + ". Please wait...";
+
+            try {
+                var rec = pendingRecords[i];
+                rec.photoData = await compressPhoto(rec.photoData);
+
+                var data = await saveOneRecord(rec);
+
+                if (data && data.success) {
+                    ok++;
+                } else {
+                    fail++;
+                    errs.push("Record " + (i + 1) + ": " + ((data && data.message) || "Unknown error"));
+                }
+            } catch (error) {
+                fail++;
+                errs.push("Record " + (i + 1) + ": " + (error && error.message ? error.message : error));
+            }
+        }
+
+        saveBtn.innerHTML = '<i class="fas fa-cloud-arrow-up"></i> SAVE ALL RECORDS';
+
+        if (fail === 0) {
+            alert("All " + ok + " record(s) saved successfully.");
+            pendingRecords = [];
+            editingIndex = -1;
+            renderRecords();
+            setAddMode();
+            document.getElementById("entryForm").reset();
+            base64Photo = "";
+            clearManagerDetails();
+            resetPhotoPreview();
+            updatePreview();
+            saveBtn.disabled = true;
+            clearBtn.disabled = false;
+            document.getElementById("saveMessage").textContent = "All records saved successfully.";
+        } else {
+            alert(ok + " saved, " + fail + " failed.\n" + errs.join("\n"));
+            saveBtn.disabled = false;
+            clearBtn.disabled = false;
+            document.getElementById("saveMessage").textContent =
+                "Save incomplete. Remaining records are still available.";
+        }
+    }
+
+
+    function escapeHtml(value) {
+
+
+        if (
+            value === null ||
+            value === undefined
+        ) {
+
+            return "";
+
+        }
+
+
+        return String(value)
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+    /* =========================================================
+       EVENTS
+    ========================================================= */
+
+    document
+        .getElementById(
+            "entryForm"
+        )
+        .addEventListener(
+            "input",
+            function(e) {
+
+
+                updatePreview();
+
+
+                if (
+                    e.target.id ===
+                    "empId"
+                ) {
+
+                    lookupEmployee(
+                        e.target.value,
+                        false
+                    );
+
+                }
+
+
+                if (
+                    e.target.id ===
+                    "managerId"
+                ) {
+
+                    lookupManager(
+                        e.target.value,
+                        false
+                    );
+
+                }
+
+            }
+        );
+
+
+    document
+        .getElementById("empId")
+        .addEventListener("blur", function () {
+            if (value("empId").length >= CONFIG.MIN_ID_LENGTH) {
+                lookupEmployee(this.value, true);
+            }
+        });
+
+
+    document
+        .getElementById("managerId")
+        .addEventListener("blur", function () {
+            if (value("managerId").length >= CONFIG.MIN_ID_LENGTH) {
+                lookupManager(this.value, true);
+            }
+        });
+
+
+    document
+        .getElementById(
+            "status"
+        )
+        .addEventListener(
+            "change",
+            updatePreview
+        );
+
+
+    document
+        .getElementById(
+            "photoInput"
+        )
+        .addEventListener(
+            "change",
+            previewFile
+        );
+
+
+    document
+        .getElementById("openCameraBtn")
+        .addEventListener("click", openLiveCamera);
+
+
+    document
+        .getElementById("captureLiveBtn")
+        .addEventListener("click", captureLivePhoto);
+
+
+    document
+        .getElementById("closeLiveBtn")
+        .addEventListener("click", closeLiveCamera);
+
+
+    window.addEventListener("beforeunload", closeLiveCamera);
+
+
+    updatePreview();
+
+    renderRecords();
+
+    setAddMode();
+
+</script>
+
+
+</body>
+</html>

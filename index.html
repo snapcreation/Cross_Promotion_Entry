@@ -1789,7 +1789,67 @@ td {
 
         }
 
+
+         .home-button-container .home-icon {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .home-button-container .home-btn:hover {
+            background: linear-gradient(
+                135deg,
+                #f5d76e,
+                #d4af37
+            );
+
+            color: #000;
+
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .home-button-container .home-btn:active {
+            transform: translateY(0);
+            box-shadow:
+                0 2px 5px rgba(0, 0, 0, 0.18);
+        }
+
+        .home-button-container .home-btn:focus {
+            outline: 2px solid #d4af37;
+            outline-offset: 2px;
+        }
+
+        /* Mobile */
+        @media (max-width: 450px) {
+
+            .home-button-container {
+                margin-bottom: 8px;
+            }
+
+            .home-button-container .home-btn {
+                padding: 7px 13px;
+                font-size: 10px;
+            }
+
+            .home-button-container .home-icon {
+                font-size: 15px;
+            }
+        }
+
     </style>
+
+
+        <a
+        href="https://snapcreations.github.io/E_S_S/"
+        class="home-btn"
+        title="Go to Home"
+    >
+        <span class="home-icon">⌂</span>
+        HOME
+    </a>
     
 
 </head>
